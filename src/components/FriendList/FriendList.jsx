@@ -12,3 +12,14 @@ export const FrendList = ({friends}) => {
         </ul>
     )
 }
+
+FrendList.propTypes = {
+    friends: PropTypes.arrayOf(
+        PropTypes.exact({
+            id: PropTypes.number,
+            avatar: PropTypes.string,
+            name: PropTypes.string,
+            isOnline: PropTypes.bool
+        })
+    )
+}
